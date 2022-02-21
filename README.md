@@ -157,21 +157,21 @@ b. Features that we dropped:
 
 **The AUC (Area Under Curve)** metrics are used. This is because this is a case of ranking problems which is very suitable to be implemented. The data is ranked based on the probability that people will take vehicle insurance.
 
-We also use **precision** because precision is suitable when we are concerned about the win rate / customer conversion ratio. The size of the winrate will reduce offering cost and will increase revenue due to the effectiveness of the sales team's offer.
+We also use **accuracy** because accuracy is suitable when we are concerned about the win rate / customer conversion ratio. The size of the winrate will reduce offering cost and will increase revenue due to the effectiveness of the sales team's offer.
 The greater the value of the precision produced by the model means the more likely it is to find people who will actually take out vehicle insurance.
 
 ### **- Modeling stage**
-
+In this stage we do modeling with 4 different models: Decision Tree, Logistic Regression, Random Forest, dan XGBoost and compare those models to pich the best model for tuning.
 
 #### **- Hyperparameter tuning**
-
+we use XGBoost model because that model gave the highest accuracy scores (87.78)
 
 
 #### **- Importance Feature**
-From the results of a more in-depth analysis of feature importance, we can find out that people who tend to take out vehicle insurance are people who:
+Based on the feature importance, we can find out that people who tend to take out vehicle insurance are people who:
 - the vehicle was damaged before
-- Never took out vehicle insurance before
-- the age of the vehicle more than one year.
+- never took out vehicle insurance before
+
 
 
 

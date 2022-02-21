@@ -155,10 +155,8 @@ b. Features that we dropped:
 ### **- Modeling**
 #### - Evaluation Metrics
 
-**The AUC (Area Under Curve)** metrics are used. This is because this is a case of ranking problems which is very suitable to be implemented. The data is ranked based on the probability that people will take vehicle insurance.
+We used **AUC (Area Under Curve)** metrics. This is because this is a case of ranking problems which is very suitable to be implemented. The data is ranked based on the probability that people will take vehicle insurance. We also use **accuracy** because accuracy is suitable when we are concerned about the win rate / customer conversion ratio. The size of the winrate will reduce offering cost and will increase revenue due to the effectiveness of the sales team's offer.
 
-We also use **accuracy** because accuracy is suitable when we are concerned about the win rate / customer conversion ratio. The size of the winrate will reduce offering cost and will increase revenue due to the effectiveness of the sales team's offer.
-The greater the value of the precision produced by the model means the more likely it is to find people who will actually take out vehicle insurance.
 
 ### **- Modeling stage**
 In this stage we do modeling with 4 different models: Decision Tree, Logistic Regression, Random Forest, dan XGBoost and compare those models to pich the best model for tuning.

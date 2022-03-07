@@ -17,14 +17,13 @@ Predicting whether a customer would be interested in buying Vehicle Insurance so
     - [Observation](#observation)
     - [Univariate Analysis](#univariate-analysis)
     - [Multivariate Analysis](#multivariate-analysis)
-    - [Business Insight](#business-insight)
+    - [Insight](#insight)
     - [Preprocessing Data](#preprocessing-data)
     - [Feature Engineering](#feature-engineering)
     - [Feature Transformation](#feature-transformation)
     - [Feature Encoding](#feature-encoding)
     - [Modeling](#modeling)
-  * [Reccomendation](#reccomendation)
-  * [Reference](#reference)
+    - [Business Insight & Recommendation](#business-insight-&-recommendation)
 
 ---
 
@@ -40,7 +39,7 @@ An insurance policy is an arrangement by which a company undertakes to provide a
 
 #### **Problem Statement**: How to predict whether a health insurance owner will be interested in vehicle insurance with the most efficient approach?
 
-#### **Business Metrics**: Revenue and Conversion Rate
+#### **Business Metrics**: Revenue and Response Rate
 
 #### **Goals**: Predict customers interest who owns health insurance in Vehicle Insurance to increase Revenue, Conversion Rate, and number of customers
 
@@ -97,7 +96,7 @@ Visualize correlation between features, in this case using correlation heatmap.
  5. Response - Age (0.11)
 - There is an interesting correlation between Response and Vehicle Damage feature. We will do One Hot Encoding on these features, which is expected to produce performance that matches expectations. 
 
-### **- Business Insight**
+### **- Insight**
 - Existing customers (Previously Insured) who already have vehicle insurance are 174628 customers. Customers who do not have vehicle insurance and are interested in having vehicle insurance are 46552 customers.
 - Based on the distribution of customer age and vehicle age, age 24 is the majority of age for owning a vehicle with a vehicle age of less than 1 year.
 
@@ -128,50 +127,40 @@ Here's the final result of the feature engineering:
 
 
 ### **- Feature Encoding**
-- Perform **label encoding** for Gender, Vehicle_Age, and Vehicle Damage features using mapping to make new features with different label. 
-- **Drop outdated column** from features engineering, features transformation, and features encoding. In this step we drop: Vehicle Age, Vehicle Damage, Gender, Age, Annual Premium, Vintage columns.
+- Perform **label encoding** for Gender, Vehicle Age, and Vehicle Damage features using mapping to make new features with different label. 
+- perform **one hot encoding** for Region Code and Policy Sales Channel.
+- **Drop outdated column** from features engineering, features transformation, and features encoding. In this step we drop: ID, Vehicle Age, Gender, Region Code, Policy Sales Channel columns.
 - Perform **Class Imbalance handling** with **under_sampling** so that the total data is reduced from 300 thousand data to below 100 thousand data.
 
 -**Insight**
-In the initial stage, all features are used and divide the features based on numeric types and categories. After performing Data Preprocessing, then the features are carried out by engineering features, transformation features, and encoding features. After all the processing, we found only a few features that have a high enough correlation. The following features will be used and dropped:
-
-
-a. Features that we used:
-   - Vehicle Damage (Yes)
-   - Previously Insured
-   - Vehicle Age (> 1 Year)
-   - Age (standarization)
-   - Annual Premiun (normalization)
-
-b. Features that we dropped:
-   - id
-   - Age 
-   - Vintage 
-   - Annual Premium
-
+In the initial stage, all features are used and divide the features based on numeric types and categories. After performing Data Preprocessing, then the features are carried out by engineering features, transformation features, and encoding features. After all the processing, we found only a few features that have a high enough correlation.
 
 
 
 ### **- Modeling**
 #### - Evaluation Metrics
 
-We used **AUC (Area Under Curve)** metrics. This is because this is a case of ranking problems which is very suitable to be implemented. The data is ranked based on the probability that people will take vehicle insurance. We also use **accuracy** because accuracy is suitable when we are concerned about the win rate / customer conversion ratio. The size of the winrate will reduce offering cost and will increase revenue due to the effectiveness of the sales team's offer.
+We used **AUC (Area Under Curve)** metrics. We use AUC because it contains a Recall value that focuses on the True Positive Rate (True Positive and False Negative) and False Positive Rate. This is because this is a case of ranking problems which is very suitable to be implemented. The data is ranked based on the probability that people will take vehicle insurance. We also use **recall** because recall is suitable when we are concerned about the response rate ratio. The size of the response rate will reduce offering cost and will increase revenue due to the effectiveness of the sales team's offer.
 
 
 ### **- Modeling stage**
 In this stage we do modeling with 4 different models: Decision Tree, Logistic Regression, Random Forest, dan XGBoost and compare those models to pich the best model for tuning.
 
+In this modeling stage, first, we split the Train & Test data. Then we conducted several model experiments, including Naive Bayes, Decision Tree, Logistic Regression, Random Forest, XGBoost and Extra Tree Classifier. Of the four models, we have chosen two, which are Random Forest and XGBoost because they have high recall and AUC values, and aren't overfit.
+
 #### **- Hyperparameter tuning**
-we use XGBoost model because that model gave the highest accuracy scores (87.78)
+Of the two models we chose, the model that we think is the best-fit is the XGBoost model because the AUC value is higher than Random Forest, with an AUC score of 85%. Hyperparameters tuning used for the model are max_depth=3, learning_rate=0.1, eta=0.005, gamma=0.0, min_child_weight=5, colsample_bytree=0.7.
 
 
 #### **- Importance Feature**
-Based on the feature importance, we can find out that people who tend to take out vehicle insurance are people who:
-- the vehicle was damaged before
-- never took out vehicle insurance before
+After interpreting the model, the most important feature is Vehicle Damage followed by Previously Insured, Email Marketing, Phone, and Age.
 
 
-
+#### **- Business Insight & Recommendation**
+- After modeling, it can be predicted that the average response rate will increase by 56%.
+- Rae Bareli (Region 28) had a significant increase of 76%, as it reached customers who could potentially experience vehicle damage as many as 70,236 cases.
+- This model can also predict the current revenue for region 28 from 64,172,574 to 259,187,797 with normal premiums. By increasing the annual premium to 5000 per month (previously 3222), we can predict the expected revenue in the 28 region to be 402,215,700.
+- Total revenue of the region (regions 28, 8, 29, 41, 46) was 589,971,909 with a reduction in expenditure of 803,400. Overall we expect revenue of 589,168,509. The estimated revenue includes costs for approaching customers to subscribe to vehicle insurance via email marketing, telephone, and youtube ads.
 
 
 

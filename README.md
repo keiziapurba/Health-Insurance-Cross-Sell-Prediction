@@ -113,11 +113,11 @@ Obtained the best engineering features occurred during one hot encoding + standa
 
 Here's the final result of the feature engineering:
 
-- **Merge** the value of '> 2 Years' with the value '1-2 Years' to '> 1 Year' because the value of '> 2 Years' is far behind (lame).
+- **Merge** the value of '> 2 Years' with the value '1-2 Years' to '> 1 Year' because the value of '> 2 Years' is far behind.
 - Age, Annual_Premium, Policy_Sales_Channel, and Vintage features are **standardized** with the StandardScaler () function. Normalization is not used because it is more universal. This process needs to be done to overcome the column with a large value that will have a large effect on the results.
-- Perform **encoding features** for Gender, Vehicle_Age, and Vehicle Damage features using pandas' get_dummies function. The encoding process uses the drop_first = True parameter because there are only 2 columns that are correlated with one another.
-- **Change the data type** of Region_Code feature which was previously float data type to string for binary encoding purposes.
-- Doing **BinaryEncoding** of the Region_Code feature which has a unique value of 53 to 7 classes then reduces it to 6 classes because one feature is only worth 0. One hot is not used because this method will generate 53 new columns.
+- Perform **encoding features** for Gender, Vehicle_Age, Region Code, Policy Sales Channel and Vehicle Damage features.
+- **Change the data type** of Region_Code and Policy Sales Channel feature which was previously float data type to string for one hot encoding purposes.
+- Doing **One Hot Encoding** of the Region_Code and Policy Sales Channel feature, then reduces it to top 5 classes.
 - Perform **Class Imbalance handling** with **under_sampling** so that the total data is reduced from 300 thousand data to below 100 thousand data.
 
 
@@ -144,9 +144,8 @@ We used **AUC (Area Under Curve)** metrics. We use AUC because it contains a Rec
 
 
 ### **- Modeling stage**
-In this stage we do modeling with 4 different models: Decision Tree, Logistic Regression, Random Forest, dan XGBoost and compare those models to pich the best model for tuning.
-
-In this modeling stage, first, we split the Train & Test data. Then we conducted several model experiments, including Naive Bayes, Decision Tree, Logistic Regression, Random Forest, XGBoost and Extra Tree Classifier. Of the four models, we have chosen two, which are Random Forest and XGBoost because they have high recall and AUC values, and aren't overfit.
+- In this stage we do modeling with 4 different models: Decision Tree, Logistic Regression, Random Forest, dan XGBoost and compare those models to pich the best model for tuning.
+- In this modeling stage, first, we split the Train & Test data. Then we conducted several model experiments, including Naive Bayes, Decision Tree, Logistic Regression, Random Forest, XGBoost and Extra Tree Classifier. Of the four models, we have chosen two, which are Random Forest and XGBoost because they have high recall and AUC values, and aren't overfit.
 
 #### **- Hyperparameter tuning**
 Of the two models we chose, the model that we think is the best-fit is the XGBoost model because the AUC value is higher than Random Forest, with an AUC score of 85%. Hyperparameters tuning used for the model are max_depth=3, learning_rate=0.1, eta=0.005, gamma=0.0, min_child_weight=5, colsample_bytree=0.7.

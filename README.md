@@ -174,7 +174,9 @@ After interpreting the model, the most important feature is Vehicle Damage follo
 - This model can also predict the current revenue for region 28 from 64,172,574 to 259,187,797 with normal premiums. By increasing the annual premium to 5000 per month (previously 3222), we can predict the expected revenue in the 28 region to be 402,215,700.
 - Total revenue of the region (regions 28, 8, 29, 41, 46) was 589,971,909 with a reduction in expenditure of 803,400. Overall we expect revenue of 589,168,509. The estimated revenue includes costs for approaching customers to subscribe to vehicle insurance via email marketing, telephone, and youtube ads.
 
+<img width="830" alt="Screen Shot 2022-03-08 at 13 33 34" src="https://user-images.githubusercontent.com/91368463/157180527-3728e47e-ffae-4557-b78b-3370a91d3c3d.png">
 
+<img width="1052" alt="Screen Shot 2022-03-08 at 13 33 58" src="https://user-images.githubusercontent.com/91368463/157180537-2e90ba22-483e-41ab-b6fb-c0a33222f2d7.png">
 
 
 

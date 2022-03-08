@@ -186,3 +186,9 @@ After interpreting the model, the most important feature is Vehicle Damage follo
 
 
 
+Team:
+- Yohanes Bima (https://github.com/yohanesbima)
+- Mira Ganis (https://github.com/miraganiss)
+- Tri Pramudya
+- Ikko Ananda Larasati
+- Junius Fubianto

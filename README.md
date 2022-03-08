@@ -83,6 +83,7 @@ Visualize every columns to gain insight.
 - Outlier: Annual Premium
  <img width="444" alt="Screen Shot 2022-03-08 at 13 41 04" src="https://user-images.githubusercontent.com/91368463/157181466-2fd5007a-c588-494b-a7a1-0129f82e5a7f.png">
 - Dominating value: Driving License.
+
 - Too many category: id, Region Code, Vintage, Annual Premium, Policy Sales Channel
 
 ### **- Multivariate Analysis**

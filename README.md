@@ -159,7 +159,7 @@ We used **AUC (Area Under Curve)** metrics. We use AUC because it contains a Rec
 ### **- Modeling stage**
 - In this stage we do modeling with 4 different models: Decision Tree, Logistic Regression, Random Forest, dan XGBoost and compare those models to pich the best model for tuning.
 - In this modeling stage, first, we split the Train & Test data. Then we conducted several model experiments, including Naive Bayes, Decision Tree, Logistic Regression, Random Forest, XGBoost and Extra Tree Classifier. Of the four models, we have chosen two, which are Random Forest and XGBoost because they have high recall and AUC values, and aren't overfit.
-
+- Performing AUC using XGBoost model:
 <img width="534" alt="Screen Shot 2022-03-08 at 13 29 24" src="https://user-images.githubusercontent.com/91368463/157179961-7028db46-1d5b-41e1-a3bc-bf70077fd6e0.png">
 
 #### **- Hyperparameter tuning**

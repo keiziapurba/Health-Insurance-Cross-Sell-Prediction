@@ -125,7 +125,7 @@ Obtained the best engineering features occurred during one hot encoding + standa
 Here's the final result of the feature engineering:
 
 - **Merge** the value of '> 2 Years' with the value '1-2 Years' to '> 1 Year' because the value of '> 2 Years' is far behind.
-- Age and Vintage features are **standardized** with the StandardScaler() function. Annual Premium feature was **normalized** with the MinMaxScaler() function. Normalization is not used because it is more universal. This process needs to be done to overcome the column with a large value that will have a large effect on the results.
+- Age and Vintage features are **standardized** with the StandardScaler() function. Annual Premium feature was **normalized** with log transformation. Normalization is not used because it is more universal. This process needs to be done to overcome the column with a large value that will have a large effect on the results.
 - Perform **encoding features** for Gender, Vehicle_Age, Region Code, Policy Sales Channel and Vehicle Damage features.
 - **Change the data type** of Region_Code and Policy Sales Channel feature which was previously float data type to string for one hot encoding purposes.
 - Doing **One Hot Encoding** of the Region_Code and Policy Sales Channel feature, then reduces it to top 5 classes.
@@ -133,7 +133,7 @@ Here's the final result of the feature engineering:
 
 
 ### **- Feature Transformation**
-- Annual Premium was **normalized** with the normalization because the data was very large and so that it was normalized.
+- Annual Premium was **normalized** with the log transformation because the data was very large and so that it was normalized.
 - Age and Vintage was **standarized** with standarization to bring down all the features to a common scale without distorting.
 
 

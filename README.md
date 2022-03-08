@@ -137,6 +137,9 @@ Here's the final result of the feature engineering:
 - perform **one hot encoding** for Region Code and Policy Sales Channel.
 - **Drop outdated column** from features engineering, features transformation, and features encoding. In this step we drop: ID, Vehicle Age, Gender, Region Code, Policy Sales Channel columns.
 - Perform **Class Imbalance handling** with **under_sampling** so that the total data is reduced from 300 thousand data to below 100 thousand data.
+<img width="381" alt="Screen Shot 2022-03-08 at 13 36 36" src="https://user-images.githubusercontent.com/91368463/157180877-dcfa3817-24e5-4a45-9b54-5e57a0c6086a.png">
+
+
 
 -**Insight**
 In the initial stage, all features are used and divide the features based on numeric types and categories. After performing Data Preprocessing, then the features are carried out by engineering features, transformation features, and encoding features. After all the processing, we found only a few features that have a high enough correlation.

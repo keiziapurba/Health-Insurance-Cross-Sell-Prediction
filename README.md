@@ -15,7 +15,7 @@
     - [Observation](#observation)
     - [Univariate Analysis](#univariate-analysis)
     - [Multivariate Analysis](#multivariate-analysis)
-    - [Insight](#insight)
+    - [EDA Insight](#eda-insight)
     - [Preprocessing Data](#preprocessing-data)
     - [Feature Engineering](#feature-engineering)
     - [Feature Transformation](#feature-transformation)

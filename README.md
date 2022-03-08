@@ -144,7 +144,6 @@ Here's the final result of the feature engineering:
 <img width="381" alt="Screen Shot 2022-03-08 at 13 36 36" src="https://user-images.githubusercontent.com/91368463/157180877-dcfa3817-24e5-4a45-9b54-5e57a0c6086a.png">
 
 
-
 -**Insight**
 In the initial stage, all features are used and divide the features based on numeric types and categories. After performing Data Preprocessing, then the features are carried out by engineering features, transformation features, and encoding features. After all the processing, we found only a few features that have a high enough correlation.
 

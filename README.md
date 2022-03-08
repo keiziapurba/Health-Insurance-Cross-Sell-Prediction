@@ -91,7 +91,7 @@ Visualize correlation between features, in this case using correlation heatmap.
  3. Response - Vehicle Age (0.22)
  4. Response - Policy Sales Channel (0.14)
  5. Response - Age (0.11)
-- There is an interesting correlation between Response and Vehicle Damage feature. We will do One Hot Encoding on these features, which is expected to produce performance that matches expectations. 
+- There is an interesting correlation between Response and Vehicle Damage feature. We will do Feature Encoding on these features, which is expected to produce performance that matches expectations. 
 
 ### **- Insight**
 - Existing customers (Previously Insured) who already have vehicle insurance are 174628 customers. Customers who do not have vehicle insurance and are interested in having vehicle insurance are 46552 customers.
@@ -106,15 +106,21 @@ Visualize correlation between features, in this case using correlation heatmap.
 - There aren't missing values and no duplicate values.
 - **Handling outliers** with a range in the form of IQR. Annual Premium data is the only data whose outliers are discarded because other data doesn't have outliers.
 
+<img width="995" alt="Screen Shot 2022-03-08 at 13 15 47" src="https://user-images.githubusercontent.com/91368463/157178081-c983e3dc-4422-41fa-ac4d-148b2da3cb52.png">
+
+
 ### **- Feature Engineering**
 - **Merge** the value of '> 2 Years' with the value '1-2 Years' to '> 1 Year'.
+
+<img width="1001" alt="Screen Shot 2022-03-08 at 13 17 28" src="https://user-images.githubusercontent.com/91368463/157178244-087c6cc8-723a-4116-af9e-c4b96fa8ab9b.png">
+
 
 Obtained the best engineering features occurred during one hot encoding + standardization + outliers handling and download sampling.
 
 Here's the final result of the feature engineering:
 
 - **Merge** the value of '> 2 Years' with the value '1-2 Years' to '> 1 Year' because the value of '> 2 Years' is far behind.
-- Age, Annual_Premium, Policy_Sales_Channel, and Vintage features are **standardized** with the StandardScaler () function. Normalization is not used because it is more universal. This process needs to be done to overcome the column with a large value that will have a large effect on the results.
+- Age and Vintage features are **standardized** with the StandardScaler() function. Annual Premium feature was **normalized** with the MinMaxScaler() function. Normalization is not used because it is more universal. This process needs to be done to overcome the column with a large value that will have a large effect on the results.
 - Perform **encoding features** for Gender, Vehicle_Age, Region Code, Policy Sales Channel and Vehicle Damage features.
 - **Change the data type** of Region_Code and Policy Sales Channel feature which was previously float data type to string for one hot encoding purposes.
 - Doing **One Hot Encoding** of the Region_Code and Policy Sales Channel feature, then reduces it to top 5 classes.
@@ -147,12 +153,19 @@ We used **AUC (Area Under Curve)** metrics. We use AUC because it contains a Rec
 - In this stage we do modeling with 4 different models: Decision Tree, Logistic Regression, Random Forest, dan XGBoost and compare those models to pich the best model for tuning.
 - In this modeling stage, first, we split the Train & Test data. Then we conducted several model experiments, including Naive Bayes, Decision Tree, Logistic Regression, Random Forest, XGBoost and Extra Tree Classifier. Of the four models, we have chosen two, which are Random Forest and XGBoost because they have high recall and AUC values, and aren't overfit.
 
+<img width="534" alt="Screen Shot 2022-03-08 at 13 29 24" src="https://user-images.githubusercontent.com/91368463/157179961-7028db46-1d5b-41e1-a3bc-bf70077fd6e0.png">
+
+
 #### **- Hyperparameter tuning**
 Of the two models we chose, the model that we think is the best-fit is the XGBoost model because the AUC value is higher than Random Forest, with an AUC score of 85%. Hyperparameters tuning used for the model are max_depth=3, learning_rate=0.1, eta=0.005, gamma=0.0, min_child_weight=5, colsample_bytree=0.7.
 
+<img width="998" alt="Screen Shot 2022-03-08 at 13 27 53" src="https://user-images.githubusercontent.com/91368463/157179755-2dd54a1c-c170-4100-9c8d-626e4474d0ec.png">
+
 
 #### **- Importance Feature**
-After interpreting the model, the most important feature is Vehicle Damage followed by Previously Insured, Email Marketing, Phone, and Age.
+After interpreting the model, the most important feature is Vehicle Damage followed by Previously Insured, Email Marketing, Telephone, and Age.
+
+<img width="748" alt="Screen Shot 2022-03-08 at 13 31 36" src="https://user-images.githubusercontent.com/91368463/157180211-6c65e327-a024-43ad-bfd6-1ec4c08723ab.png">
 
 
 #### **- Business Insight & Recommendation**

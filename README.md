@@ -79,9 +79,9 @@ Total data points: 381109
 ### **- Univariate Analysis**
 Visualize every columns to gain insight.
 - Skewed positif and bimodal: Age
-- <img width="421" alt="Screen Shot 2022-03-08 at 13 41 57" src="https://user-images.githubusercontent.com/91368463/157181582-c3a81283-1563-4fb7-b717-6dd0bc0c5d9f.png">
+ <img width="421" alt="Screen Shot 2022-03-08 at 13 41 57" src="https://user-images.githubusercontent.com/91368463/157181582-c3a81283-1563-4fb7-b717-6dd0bc0c5d9f.png">
 - Outlier: Annual Premium
-- <img width="444" alt="Screen Shot 2022-03-08 at 13 41 04" src="https://user-images.githubusercontent.com/91368463/157181466-2fd5007a-c588-494b-a7a1-0129f82e5a7f.png">
+ <img width="444" alt="Screen Shot 2022-03-08 at 13 41 04" src="https://user-images.githubusercontent.com/91368463/157181466-2fd5007a-c588-494b-a7a1-0129f82e5a7f.png">
 - Dominating value: Driving License
 - Too many category: id, Region Code, Vintage, Annual Premium, Policy Sales Channel
 

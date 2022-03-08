@@ -79,12 +79,16 @@ Total data points: 381109
 ### **- Univariate Analysis**
 Visualize every columns to gain insight.
 - Skewed positif and bimodal: Age
+- <img width="421" alt="Screen Shot 2022-03-08 at 13 41 57" src="https://user-images.githubusercontent.com/91368463/157181582-c3a81283-1563-4fb7-b717-6dd0bc0c5d9f.png">
 - Outlier: Annual Premium
+- <img width="444" alt="Screen Shot 2022-03-08 at 13 41 04" src="https://user-images.githubusercontent.com/91368463/157181466-2fd5007a-c588-494b-a7a1-0129f82e5a7f.png">
 - Dominating value: Driving License
 - Too many category: id, Region Code, Vintage, Annual Premium, Policy Sales Channel
 
 ### **- Multivariate Analysis**
 Visualize correlation between features, in this case using correlation heatmap.
+<img width="669" alt="Screen Shot 2022-03-08 at 13 38 30" src="https://user-images.githubusercontent.com/91368463/157181195-a9c6552b-527d-4c19-b660-799eb02725d1.png">
+
 - Overall, correlations between features low, but there are 5 features that relevant to Response feature:
  1. Response - Vehicle Damage (0.35)
  2. Response - Previously Insured (0.34) 

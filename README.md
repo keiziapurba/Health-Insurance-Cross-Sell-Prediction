@@ -45,6 +45,7 @@ An insurance policy is an arrangement by which a company undertakes to provide a
 #### **Objective**: Build a model to predict whether health insurance owners will be interested in vehicle insurance from data from health insurance owners and their responses. Also, using an automatic bidding system model for customers who subscribe to health insurance in order to get information about vehicle insurance.
 
 #### **Predictive Analytics**: Creating a model that can help predict whether customers, including those who will be interested in vehicle insurance or not
+<img width="1440" alt="Screen Shot 2022-03-06 at 14 33 58" src="https://user-images.githubusercontent.com/91368463/157177136-f6f7e98c-50c1-4877-8e36-543c39465866.png">
 
 
 ### **Data Description**
@@ -97,6 +98,9 @@ Visualize correlation between features, in this case using correlation heatmap.
 ### **- Insight**
 - Existing customers (Previously Insured) who already have vehicle insurance are 174628 customers. Customers who do not have vehicle insurance and are interested in having vehicle insurance are 46552 customers.
 - Based on the distribution of customer age and vehicle age, age 24 is the majority of age for owning a vehicle with a vehicle age of less than 1 year.
+
+
+
 
 
 

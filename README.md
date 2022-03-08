@@ -162,7 +162,6 @@ We used **AUC (Area Under Curve)** metrics. We use AUC because it contains a Rec
 
 <img width="534" alt="Screen Shot 2022-03-08 at 13 29 24" src="https://user-images.githubusercontent.com/91368463/157179961-7028db46-1d5b-41e1-a3bc-bf70077fd6e0.png">
 
-
 #### **- Hyperparameter tuning**
 Of the two models we chose, the model that we think is the best-fit is the XGBoost model because the AUC value is higher than Random Forest, with an AUC score of 85%. Hyperparameters tuning used for the model are max_depth=3, learning_rate=0.1, eta=0.005, gamma=0.0, min_child_weight=5, colsample_bytree=0.7.
 

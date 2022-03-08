@@ -98,7 +98,7 @@ Visualize correlation between features, in this case using correlation heatmap.
  5. Response - Age (0.11)
 - There is an interesting correlation between Response and Vehicle Damage feature. We will do Feature Encoding on these features, which is expected to produce performance that matches expectations. 
 
-### **- Insight**
+### **- EDA Insight**
 - Existing customers (Previously Insured) who already have vehicle insurance are 174628 customers. Customers who do not have vehicle insurance and are interested in having vehicle insurance are 46552 customers.
 - Based on the distribution of customer age and vehicle age, age 24 is the majority of age for owning a vehicle with a vehicle age of less than 1 year.
 

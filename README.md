@@ -190,5 +190,5 @@ Team:
 - Yohanes Bima (https://github.com/yohanesbima)
 - Mira Ganis (https://github.com/miraganiss)
 - Tri Pramudya (https://github.com/tryi0)
-- Ikko Ananda Larasati
+- Ikko Ananda Larasati (https://github.com/ikkoananda)
 - Junius Fubianto

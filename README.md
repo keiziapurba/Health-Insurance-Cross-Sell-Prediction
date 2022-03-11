@@ -55,7 +55,7 @@ Total data points: 381109
 |----|----|----|
 |id| (continous) |Unique identifier for the Customer.|
 |Age |Numerical| Age of the Customer.|
-|Gender |Categorical|Gender of the Custome|
+|Gender |Categorical|Gender of the Customer|
 |Driving_License |Categorical|0 for customer not having DL, 1 for customer having DL.|
 |Region_Code |Categorical|Unique code for the region of the customer.|
 |Previously_Insured| Categorical | 0 for customer not having vehicle insurance, 1 for customer having vehicle insurance.|
